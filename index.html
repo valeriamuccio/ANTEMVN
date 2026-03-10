@@ -1,72 +1,193 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Flip Foto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-    .card {
-    width: 80vw;
-    height: 130vw;
-    perspective: 1000px;
-    cursor: pointer;
-    }
-    .inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: transform 0.8s;
-    }
-    .card.flipped .inner {
-      transform: rotateY(180deg);
-    }
+<meta charset="UTF-8">
+<title>GlobalNews24 - Aeroporto di Bangkok chiuso per maltempo</title>
 
-    .front, .back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
+<style>
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f4f4;
+color:#222;
+}
 
-    .front img, .back img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.header{
+background:#c40000;
+color:white;
+padding:18px 30px;
+font-size:28px;
+font-weight:bold;
+}
 
-    .back {
-      transform: rotateY(180deg);
-    }
-  </style>
+.nav{
+background:#111;
+color:white;
+padding:12px 30px;
+font-size:14px;
+}
+
+.nav span{
+margin-right:20px;
+cursor:pointer;
+}
+
+.page{
+max-width:1100px;
+margin:30px auto;
+display:flex;
+gap:30px;
+}
+
+.article{
+background:white;
+padding:35px;
+flex:3;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+
+.sidebar{
+flex:1;
+}
+
+.widget{
+background:white;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+
+.category{
+color:#c40000;
+font-weight:bold;
+font-size:13px;
+margin-bottom:10px;
+}
+
+h1{
+font-size:34px;
+margin:0 0 10px 0;
+}
+
+.subtitle{
+color:#555;
+font-size:18px;
+margin-bottom:20px;
+}
+
+.meta{
+font-size:13px;
+color:#888;
+margin-bottom:20px;
+}
+
+.article img{
+width:100%;
+margin-bottom:20px;
+}
+
+p{
+font-size:17px;
+line-height:1.6;
+margin-bottom:18px;
+}
+
+.related li{
+margin-bottom:12px;
+font-size:15px;
+}
+
+.footer{
+background:#111;
+color:#aaa;
+padding:25px;
+margin-top:40px;
+font-size:13px;
+text-align:center;
+}
+</style>
 </head>
+
 <body>
-  <div class="card" id="flip-card">
-    <div class="inner">
-      <div class="front">
-        <img src="foto1.jpg" alt="Foto 1">
-      </div>
-      <div class="back">
-        <img src="foto2.jpg" alt="Foto 2 con QR">
-      </div>
-    </div>
-  </div>
 
-  <script>
-    // Rende il flip compatibile con clic e tap su mobile
-    const card = document.getElementById('flip-card');
+<div class="header">GLOBALNEWS24</div>
 
-    card.addEventListener('click', function () {
-      card.classList.toggle('flipped');
-    });
-  </script>
+<div class="nav">
+<span>Ultima ora</span>
+<span>Mondo</span>
+<span>Politica</span>
+<span>Economia</span>
+<span>Tecnologia</span>
+<span>Viaggi</span>
+</div>
+
+<div class="page">
+
+<div class="article">
+
+<div class="category">MONDO</div>
+
+<h1>Thailandia, aeroporto di Bangkok chiuso temporaneamente per maltempo</h1>
+
+<div class="subtitle">
+Piogge monsoniche intense e scarsa visibilità hanno costretto le autorità a sospendere le operazioni nello scalo principale della capitale.
+</div>
+
+<div class="meta">
+10 marzo 2026 • Redazione Esteri
+</div>
+<img src="airport.png">
+
+<p>
+L'aeroporto internazionale della capitale thailandese è stato temporaneamente chiuso nella mattinata di martedì dopo un rapido peggioramento delle condizioni meteorologiche che ha interessato l'area metropolitana di Bangkok e diverse province centrali del Paese.
+</p>
+
+<p>
+Le autorità aeroportuali hanno annunciato la sospensione di decolli e atterraggi a causa di forti piogge monsoniche, raffiche di vento e visibilità ridotta lungo le piste principali. Alcuni voli in arrivo sono stati deviati verso scali alternativi nella regione, mentre numerosi collegamenti in partenza sono stati rinviati.
+</p>
+
+<p>
+Secondo i primi rapporti diffusi dai gestori dello scalo, le precipitazioni intense hanno provocato allagamenti in alcune aree operative e difficoltà nelle operazioni di rullaggio degli aeromobili.
+</p>
+
+<p>
+Le compagnie aeree stanno informando i passeggeri sui ritardi e sulle eventuali modifiche agli itinerari. Ai viaggiatori è stato consigliato di verificare lo stato del proprio volo prima di recarsi in aeroporto.
+</p>
+
+<p>
+Il servizio meteorologico nazionale prevede che il sistema temporalesco possa persistere per diverse ore, con ulteriori precipitazioni e possibili disagi anche nei trasporti urbani della capitale.
+</p>
+
+</div>
+
+<div class="sidebar">
+
+<div class="widget">
+<h3>Ultime notizie</h3>
+<ul class="related">
+<li>Giappone, forte scossa di terremoto al largo di Hokkaido</li>
+<li>Trasporti europei: nuovi scioperi previsti nel settore aereo</li>
+<li>Clima estremo nel Sud-Est asiatico, piogge record stagionali</li>
+<li>Turismo internazionale in crescita nel 2026</li>
+</ul>
+</div>
+
+<div class="widget">
+<h3>Più letti</h3>
+<ul class="related">
+<li>Nuove rotte aeree tra Europa e Asia</li>
+<li>Le città più visitate del 2025</li>
+<li>Tempeste tropicali: come influenzano i voli</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+GlobalNews24 ©️ 2026 – Pagina dimostrativa locale
+</div>
+
 </body>
 </html>
